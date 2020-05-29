@@ -72,6 +72,8 @@ stages:
   - deployment: Deploy
     pool:
       vmImage: 'ubuntu-16.04'
+      demands:
+        - npm
     environment: dev
     variables:
     - group: Release
